@@ -92,7 +92,7 @@ public class SetTest {
 
         Iterator iterator = set.iterator();
         while(iterator.hasNext()) {
-            System.out.println(iterator.next());
+            System.out.println(iterator.next()); // ehee
         }
     }
 }
