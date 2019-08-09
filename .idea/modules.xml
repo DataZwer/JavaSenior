@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Annotation/Annotation.iml" filepath="$PROJECT_DIR$/Annotation/Annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollectionCalss/CollectionCalss.iml" filepath="$PROJECT_DIR$/CollectionCalss/CollectionCalss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumClass/EnumClass.iml" filepath="$PROJECT_DIR$/EnumClass/EnumClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FrequencyJavaClass/FrequencyJavaClass.iml" filepath="$PROJECT_DIR$/FrequencyJavaClass/FrequencyJavaClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaSenior.iml" filepath="$PROJECT_DIR$/JavaSenior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaThread/JavaThread.iml" filepath="$PROJECT_DIR$/JavaThread/JavaThread.iml" />
+    </modules>
+  </component>
+</project>
