@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class FileTest {
     @Test
@@ -44,7 +41,7 @@ public class FileTest {
             File file2 = new File("hehe.txt");
             fr2 = new FileReader(file2);
 
-            char[] cbuf = new char[5];
+            char[] cbuf = new char[5]; // 字节即
             int len;
             while ((len = fr2.read(cbuf)) != -1) {
                 for (int i = 0; i < len; i++) {
@@ -65,12 +62,74 @@ public class FileTest {
                 }
             }
         }
-
-
-
-
-
     }
+
+    // 用字节流实现两张图片的复制
+    @Test
+    public void test4() {
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+        try {
+            File srcFile = new File("C:\\Users\\Think\\Pictures\\hehe.png");
+            File decFile = new File("C:\\Users\\Think\\Pictures\\hehe1.jpg");
+
+            fis = new FileInputStream(srcFile);
+            fos = new FileOutputStream(decFile);
+
+            // 文件复制
+            byte[] buffer = new byte[5];
+            int len;
+            while ((len = fis.read(buffer)) != -1) {
+                fos.write(buffer);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fis != null || fos != null) {
+                    fis.close();
+                    fos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Test
+    public void test5() {
+        BufferedInputStream bis = null;
+        BufferedOutputStream bos = null;
+        try {
+            File srcFile = new File("C:\\Users\\Think\\Pictures\\hehe.png");
+            File decFile = new File("C:\\Users\\Think\\Pictures\\hehe2.jpg");
+
+            FileInputStream fis = new FileInputStream(srcFile);
+            FileOutputStream fos = new FileOutputStream(decFile);
+
+            bis = new BufferedInputStream(fis);
+            bos = new BufferedOutputStream(fos);
+
+            // 文件复制
+            byte[] buffer = new byte[5];
+            int len;
+            while ((len = bis.read(buffer)) != -1) {
+                bos.write(buffer);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bis != null || bos != null) {
+                    bis.close();
+                    bos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 
 
 }
