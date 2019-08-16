@@ -12,7 +12,7 @@ public class FileTest {
     @Test
     public void test2() {
        File file1 = new File("E:\\hehe\\haha\\lala.txt");
-       file1.mkdirs(); // 创建的是目录
+       file1.mkdirs(); // 创建的是目录 呵呵呵呵
     }
 
     @Test
